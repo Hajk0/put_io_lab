@@ -1,5 +1,5 @@
 # put_io_lab
 # Witold Paweł Hajkowicz
-23.10.2023
+23.październik.2023r.
 
 ## napis
