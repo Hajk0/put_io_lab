@@ -51,10 +51,11 @@ Osoba chcąca zakupić produkt na aukcji.
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
 * [UC2](#uc2): Przekazanie produktu Kupującemu
+* [UC3](#uc3): Zakończenie aukcji
 
 [Kupujący](#ac2)
-* [BR1](#br1): Zaoferowanie wyższej kwoty za produkt od aktualnie najwyższej
-* [BR3](#br3): przekazanie należności Sprzedającemu
+* [BR1](#br1): Zaoferowanie wyższej kwoty za produkt
+* [BR3](#br3): Przekazanie należności Sprzedającemu
 
 ---
 <a id="uc1"></a>
@@ -135,6 +136,7 @@ Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (u
 | Przypadek użycia                                  | Aukcja | Produkt | ... |
 | ------------------------------------------------- | ------ | ------- | --- |
 | UC1: Wystawienia produktu na aukcję               |    C   |    C    | ... |
-| ???                                               |  ...   |  ...    | ... |
-
-
+| UC2: Przekazanie produktu Kupującemu                                               |  R   |  R, U    | ... |
+| UC3: Zakończenie aukcji                                               |  D   |  -    | ... |
+| BR1: Zaoferowanie wyższej kwoty za produkt                                               |  R, U   |  -    | ... |
+| BR3: Przekazanie należności Sprzedającemu                                               |  R   |  -    | ... |
