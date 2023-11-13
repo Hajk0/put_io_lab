@@ -18,8 +18,8 @@ Specyfikacja wymagań funkcjonalnych w ramach informatyzacji procesu sprzedaży 
 1. [Sprzedający](#ac1) wystawia produkt na aukcję. ([UC1](#uc1))
 2. [Kupujący](#ac2) oferuje kwotę za produkt wyższą od aktualnie najwyższej oferty. ([BR1](#br1))
 3. [Kupujący](#ac2) wygrywa aukcję ([BR2](#br2))
-4. [Kupujący](#ac2) przekazuje należność Sprzedającemu.
-5. [Sprzedający](#ac1) przekazuje produkt Kupującemu.
+4. [Kupujący](#ac2) przekazuje należność Sprzedającemu.([BR3](#br3))
+5. [Sprzedający](#ac1) przekazuje produkt Kupującemu. ([UC2](#uc2))
 
 **Scenariusze alternatywne:** 
 
@@ -50,10 +50,11 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC2](#uc2): Przekazanie produktu Kupującemu
 
 [Kupujący](#ac2)
-* ...
+* [BR1](#br1): Zaoferowanie wyższej kwoty za produkt od aktualnie najwyższej
+* [BR3](#br3): przekazanie należności Sprzedającemu
 
 ---
 <a id="uc1"></a>
@@ -77,17 +78,31 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Przekazanie produktu Kupującemu
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2)
 
 **Scenariusz główny:**
-1. ...
+1. [Sprzedający](#ac1) zgłasza do systemu chęć przesłania produktu cyfrowego.
+2. System pokazuje dane produktu cyfrowego oraz [Kupującego](#ac2).
+3. System prosi o potwierdzenie przesłania produktu cyfrowego.
+4. [Sprzedający](#ac1) potwierdza chęć przesłania produktu cyfrowego.
+5. System informuje o pomyślnym przesłaniu produktu cyfrowego.
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
+2.A. Zgłoszono chęć przesłania fizycznego produktu
+* 2.A.1. System informuje o braku możliwości przesłania produktu.
+* 2.A.2. System kończy operację.
+
+2.B Zgłoszono chęć przesłania produktu który nie należy do użytkownika.
+* 2.B.1. System informuje o braku produktu na liście produktów użytkownika.
+* 2.B.2. System prosi o podanie innego produktu.
+* 2.B.3. Przejdź do kroku 1.
+
+4.A. Nie potwierdzono chęci przesłania produktu.
+* 4.A.1. System prosi o podanie innego produktu.
+* 4.A.2. Przejdź do kroku 1.
 
 ---
 
